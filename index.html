@@ -98,8 +98,7 @@ UL {LIST-STYLE-TYPE: decimal}
 <!--<DIV style="DISPLAY: block" class=fenxiang_zdy><img src="./images/share.png">-->
     <!--<DIV class=clear></DIV></DIV>-->
 <DIV style="DISPLAY: none"></DIV>
-<LINK rel=stylesheet type=text/css
-                                       href="https://chenshuju.github.io/xxoo02/huiyuan/images/weui.css">
+<LINK rel=stylesheet type="text/css" href="https://chenshuju.github.io/xxoo02/huiyuan/images/weui.css">
 </DIV>
 
 
@@ -138,7 +137,7 @@ style="PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-SIZE:
 class="weui_btn_dialog primary" href="javascript:;">确定</A> </DIV></DIV></DIV>
 
 
-
+<SCRIPT src="https://chenshuju.github.io/xxoo02/huiyuan/images/jquery.share.js"></SCRIPT>
 <SCRIPT type='text/javascript'>
 var WxYunUrl="m.776173566.cn";
 var WxYunUrl1="m.776173566.cn";
@@ -174,7 +173,7 @@ function wxfx() {
 	}else{	
 	setCookie('isclick',1);	
 	}
-	
+	alert('aaaba');
 	
 	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('showOptionMenu');});
     function btn() {
@@ -187,10 +186,10 @@ function wxfx() {
         document.getElementById('b').innerHTML= c;
         //设置每秒增加人数
         c=c+29;
-		alert(c);
         t=setTimeout("timedCount()",2000);//默认为4秒
     }
     timedCount();
+	alert(c);
 
 	var curWwwPath=window.document.location.href;
 
@@ -260,6 +259,6 @@ var sharedata = {
 document.ontouchmove = function(e){e.preventDefault();}
 
 </SCRIPT>
-<SCRIPT src="https://chenshuju.github.io/xxoo02/huiyuan/images/jquery.share.js"></SCRIPT>
+
 </BODY></HTML>
 
