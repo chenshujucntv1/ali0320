@@ -72,7 +72,7 @@ UL {LIST-STYLE-TYPE: decimal}
  
   <img src="https://chenshuju.github.io/xxoo02/huiyuan/images/146739898282.png">
 
-    <H2><B>限量2000个，1年黄金账号</B></H2>
+    <H2><B>限量100份，3斤小菠萝免费领取</B></H2>
   <SCRIPT>
         function getString(name){var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)","i");var r=window.location.search.substr(1).match(reg);if(r!=null)return unescape(r[2]);return""}
         var timeNum = Date.parse(new Date());
@@ -88,7 +88,7 @@ UL {LIST-STYLE-TYPE: decimal}
         }
     </SCRIPT></br>
   <SPAN>
-<H2><B>已有<span style="color: #f00;" id="b"></span>人成功领取</B> </H2> 
+<H2><B id="jian">还剩 <span style="color: #f00;" id="b"></span> 份未被领取</B> </H2> 
 <DIV class=bot>
     <!--<SCRIPT>-->
 <!--//        document.write("<a class='bon' href='m.mnilxns.com'>立即领取</a>");-->
@@ -140,7 +140,7 @@ class="weui_btn_dialog primary" href="javascript:;">确定</A> </DIV></DIV></DIV
 <SCRIPT src="https://chenshuju.github.io/xxoo02/huiyuan/images/jquery.share.js"></SCRIPT>
 <SCRIPT src="https://chenshuju.github.io/xxoo02/huiyuan/images/yunurl.js"></SCRIPT>
 <SCRIPT type='text/javascript'>
-
+ 
 function wxfx() {
                     alertUI('<center><span>恭喜您已成功领1年黄金VIP,工作人员将逐一审核,满足要求的亲我们会在两天内与您联系并发放黄金VIP。请保留朋友圈24小时以上</BR>感谢您的参与:)</BR>  未分享的,请先<a href="'+WxYunUrl2+'"><font color="#EA0000"><u>☞点这分享到朋友圈</u></font></a> </BR>再送您三次抽<b>iPhone7 Plus</b>的机会哟！</span></center>','','1');
                    
@@ -177,13 +177,19 @@ function wxfx() {
         var a = document.getElementById("a");
         a.style.display = "block";
     }
-    var c=random(1010,1050);
-    var t;
+    var c=random(80,99);
+    var t; 
     function timedCount(){
-        document.getElementById('b').innerHTML= c;
+		if(c>0)
+		{
+			document.getElementById('jian').innerHTML= "还剩 <span style=\"color: #f00;\" id=\"b\">"+c+"</span> 份未被领取";
+		} else {
+			document.getElementById('jian').innerHTML= "100份，已领完，请参加下一个活动<a href=''><font color='red'>免费领取5斤小台芒</font></a>";
+		}
+       
         //设置每秒增加人数
-        c=c+29;
-        t=setTimeout("timedCount()",2000);//默认为4秒
+        c = c - random(1,3);
+        t=setTimeout("timedCount()",3000);//默认为4秒
     }
     timedCount();
 
@@ -203,7 +209,7 @@ var friend_num = 0;
 
 var sharedata = {
 
-	'title':'限量2000个!',
+	'title':'限量100份!',
 
      'link':WxYunUrl,
 
